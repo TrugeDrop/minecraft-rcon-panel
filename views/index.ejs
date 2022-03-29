@@ -1,0 +1,60 @@
+<div class="container-fluid content" style="padding-top: 15px;">
+		<center>
+       		<p class="fs-2 text-white"><%=server.server_name%></p>
+        </center>
+        <br>
+		<div class="row">
+			<div class="col-md-8 col-lg-8 console">
+				<div class="card shadow bg-dark text-white border-light">
+					<div class="card-header">
+						<h3 class="card-text">Sunucu Konsolu</h3>
+					</div>
+					<div class="card-body">
+						<ul class="list-group" id="groupConsole">
+                            <%if(console.length > 0 && istek.length > 0){%>
+                            <li class="list-group-item list-group-item-light text-black"><%=istek%></li>
+                            <li class="list-group-item list-group-item-secondary"><%=console%></li>
+                            <%}else{%>
+							<li class="list-group-item list-group-item-info">Hoş Geldin!</li>
+                            <%}%>
+						</ul>
+				  </div>
+                  </div>
+<br>
+                    <form class="shadow bg-dark text-white border-light" action="/console" method="post">
+                    <div  class="input-group">
+                <span class="input-group-text">/</span>
+					<input name="code" type="text" class="form-control">
+				       </div>
+                       </form>
+</div>
+			<div class="col-md-4 col-lg-4 status">
+				<div class="card shadow bg-dark text-white border-light">
+					<div class="card-header">
+						<h3 class="card-text">Sunucu Bilgileri</h3>
+					</div>
+					<div class="card-body">
+						Sunucu IPsi: <b><%=query.hostIP%></b><br>
+                        Sunucu Portu: <b><%=query.hostPort%></b><br>
+                        Oyun Tipi: <b><%=query.gameType%></b><br>
+                        Harita: <b><%=query.map%></b><br>
+                        Oyuncular: <b><%=query.players.online%>/<%=query.players.max%></b>
+					</div>
+				</div>
+                <br>
+                <div class="card shadow bg-dark text-white border-light">
+					<div class="card-header">
+						<h3 class="card-text">FTP Bilgileri</h3>
+					</div>
+					<div class="card-body">
+						IP: <b><%=server.server_ip%></b><br>
+                        Ad: <b><%=server.server_name%></b><br>
+                        Şifre: <b>Sunucunuzun şifresi</b><br>
+                        Port: <b><%=server.ftp_port%></b><br>
+					</div>
+				</div>
+			</div>
+
+		</div>
+        <br>
+	</div>

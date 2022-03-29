@@ -1,0 +1,15 @@
+<div class="container text-white">
+<br>
+<p class="fs-2 text-center">Admin Panel</p>
+<br>
+<div class="card shadow bg-dark text-white border-light">
+	<div class="card-header">Sunucular</div>
+    <div class="card-body">
+		<ul class="list-group">
+        	<%servers.forEach(data => {%>
+            	<p class="list-group-item"><%=data.server_name%><a class="float-end btn btn-danger" href="/admin/delete/<%=data._id%>">Sil</a></p>
+            <%})%>
+        </ul>
+    </div>
+</div>
+</div>

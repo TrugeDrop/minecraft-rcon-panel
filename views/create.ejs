@@ -1,0 +1,21 @@
+<center class="container">
+    <br><br><br>
+    <div class="card shadow">
+    	<div class="card-body">    	
+			<p class="fs-2">Sunucu Oluştur</p>
+            <br>
+            <form action="/admin/create" method="post">
+            	<input class="form-control" name="server_name" placeholder="Sunucu Adı" required><br>
+            	<input type="password" class="form-control" name="server_password" placeholder="Sunucu Parolası" required><br>
+            	<input class="form-control" name="server_ip" placeholder="Sunucu IPsi" required><br>
+            	<input class="form-control" name="server_port" placeholder="Sunucu Portu" required><br>
+            	<input class="form-control" name="rcon_port" placeholder="RCON Portu" required><br>
+            	<input type="password" class="form-control" name="rcon_password" placeholder="RCON Şifresi" required><br>
+            	<input class="form-control" name="query_port" placeholder="Query Portu" required><br>
+            	<input class="form-control" name="ftp_port" placeholder="FTP Portu" required><br>
+                <input type="submit" value="Oluştur" class="btn btn-success">
+                </form>
+        </div>
+    </div>
+    <br>
+</center>

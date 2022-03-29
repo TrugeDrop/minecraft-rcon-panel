@@ -1,0 +1,39 @@
+<center class="container">
+<br>
+<div class="card shadow" style="border-radius: 10px">
+<div class="card-body">
+<p class="fs-2">Giriş Yap</p>
+<br>
+	<form action="/login" method="post">
+    	<input name="server_name" class="form-control" placeholder="Sunucu Adı">
+        <br>
+        <input type="password" name="server_password" class="form-control" placeholder="Sunucu Parolası">
+        <br>
+        <input value="Giriş Yap" type="submit" class="btn btn-success">
+    </form>
+<a class="link-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Admin Panel Girişi
+</a>
+    </div>
+    </div>
+</center>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Aoonramel Hosting Admin Panel</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/admin" method="post">
+      <div class="modal-body">
+         <input class="form-control" name="password" placeholder="Admin Panel Parolası">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
